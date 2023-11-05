@@ -2,7 +2,7 @@ const API_KEY="e74408993f634676bf60844c828daa67";
 const url="https://newsapi.org/v2/everything?q=";
 
 window.addEventListener("load",()=>
-  fetchNews("India")
+  fetchNews("in")
 );
 
 
