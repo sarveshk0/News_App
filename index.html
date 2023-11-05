@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News app</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .nav{
+            width: 100%;
+        }
+        @media(max-width:768px){
+            .nav{
+                width: auto;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+            
+        
+        
+
+    </style>
+</head>
+<body class="bg-black p-0 m-0 box-border font-serif relative">
+    
+        <nav class="text-white flex justify-evenly items-center bg-[#183b56] h-24 w-full font-serif nav  fixed ">
+            <img src="https://img.freepik.com/premium-vector/important-news-icon-flat-illustration-important-news-vector-icon-web_98396-5842.jpg" height="10" width="50" alt="logo">
+            <div>
+                <ul class="flex  space-x-4 ">
+                    
+                    <li class="Nav-item hover:bg-red-600 hover:font-bold  active:bg-red-600 hover:transition duration-500 ease-in-out cursor-pointer"  id="Health" onclick="onNavItemClick('Health')">Health</li>
+                    <li class="Nav-item hover:bg-red-600 hover:font-bold  active:bg-red-600 hover:transition duration-500 ease-in-out cursor-pointer"   id="Business" onclick="onNavItemClick('Business')" >Business</li>
+                    <li class="Nav-item hover:bg-red-600 hover:font-bold  active:bg-red-600 hover:transition duration-500 ease-in-out cursor-pointer"  id="Technology " onclick="onNavItemClick('Technology')">Technology</li>
+                    <li class="Nav-item hover:bg-red-600 hover:font-bold  active:bg-red-600 hover:transition duration-500 ease-in-out  cursor-pointer"  id="Sports" onclick="onNavItemClick('Sports')">Sports</li>
+                    <li class="Nav-item hover:bg-red-600 hover:font-bold  active:bg-red-600 hover:transition duration-500 ease-in-out cursor-pointer" id="General" onclick="onNavItemClick('General')">General</li>
+                    <li class="Nav-item hover:bg-red-600 hover:font-bold  active:bg-red-600 hover:transition duration-500 ease-in-out cursor-pointer" id="Science" onclick="onNavItemClick('Science')">Science</li>
+                 </ul>
+            
+            </div>
+             <div >
+                <input type="text" class="rounded-sm text-black  " id="search-text" placeholder="e.g.science">
+                <button class="bg-red-700 w-16 rounded-sm hover:bg-red-500" id="search-button">Search</button>
+             </div>
+          
+        </nav>
+
+        <!-- card -->
+        <main class="h-80 w-full pt-20">
+            <div class="card-container grid sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4" id="card-container">
+            
+            </div>
+        </main>
+       
+
+       
+       
+        <template id="template-news-container">
+        
+            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" id="card">
+                <a href="#">
+                    <img class="rounded-t-lg" id="news-image" src="https://placehold.co/600x400" alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" id="Title">Title</h5>
+                    </a>
+                    <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="news-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et accusamus delectus incidunt tempore nesciunt nobis sunt totam, vel facere id?</p>
+                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Read more
+                         <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </template>
+        
+        <script src="scipts.js"></script>
+       
+    
+</body>
+</html>
